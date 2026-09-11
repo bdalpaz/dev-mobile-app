@@ -4,7 +4,7 @@ import { SafeAreaView } from 'react-native-safe-area-context';
 
 import { Logo } from '../atoms/Logo';
 import { Title } from '../atoms/Title';
-import { Cores, Espaco } from '@/constants/rotamap';
+import { Cores, Espaco, LARGURA_CELULAR } from '@/constants/rotamap';
 
 type AuthLayoutProps = {
   title: string;
@@ -19,11 +19,13 @@ export function AuthLayout({ title, children }: AuthLayoutProps) {
   return (
     <SafeAreaView style={styles.tela}>
       <ScrollView
-        contentContainerStyle={styles.conteudo}
+        contentContainerStyle={styles.rolagem}
         keyboardShouldPersistTaps="handled">
-        <Logo />
-        <Title>{title}</Title>
-        <View style={styles.corpo}>{children}</View>
+        <View style={styles.moldura}>
+          <Logo />
+          <Title>{title}</Title>
+          <View style={styles.corpo}>{children}</View>
+        </View>
       </ScrollView>
     </SafeAreaView>
   );
@@ -31,12 +33,13 @@ export function AuthLayout({ title, children }: AuthLayoutProps) {
 
 const styles = StyleSheet.create({
   tela: { flex: 1, backgroundColor: Cores.amarelo },
-  conteudo: {
-    flexGrow: 1,
+  rolagem: { flexGrow: 1, alignItems: 'center', paddingVertical: Espaco.xl },
+  moldura: {
+    width: '100%',
+    maxWidth: LARGURA_CELULAR,
     alignItems: 'center',
     gap: Espaco.lg,
     paddingHorizontal: Espaco.lg,
-    paddingVertical: Espaco.xl,
   },
   corpo: { alignSelf: 'stretch', gap: Espaco.lg },
 });

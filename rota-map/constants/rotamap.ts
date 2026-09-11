@@ -7,7 +7,15 @@ export const Cores = {
   branco: '#FFFFFF',
   cinzaClaro: '#E9EAEC',
   placeholder: '#596579',
+  /** Fundo da area de upload de foto. */
+  oliva: '#907912',
 } as const;
+
+/**
+ * Largura do frame do Figma (430x932). Em celular nao muda nada; no navegador
+ * e em tablet impede que o conteudo estique pela tela inteira.
+ */
+export const LARGURA_CELULAR = 430;
 
 export const Espaco = { xs: 4, sm: 8, md: 16, lg: 24, xl: 32 } as const;
 
