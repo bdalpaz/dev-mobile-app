@@ -7,6 +7,11 @@ export const BAIRROS = [
   'Araras',
   'Bela Vista',
   'Bom Pastor',
+  'Centro',
+  'Efapi',
+  'Jardim Itália',
+  'Presidente Médici',
+  'São Cristóvão',
 ] as const;
 
 type NeighborhoodSelectProps = {

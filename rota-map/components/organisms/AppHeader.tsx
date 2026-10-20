@@ -18,7 +18,7 @@ export function AppHeader() {
         <Text style={styles.nome}>ROTA MAP</Text>
         <Text style={styles.slogan}>MAPEANDO A INCLUSÃO</Text>
       </View>
-      <IconButton name="user" label="Perfil" onPress={() => router.replace('/(tabs)')} />
+      <IconButton name="user" label="Perfil" onPress={() => router.replace('/(tabs)/perfil')} />
     </View>
   );
 }

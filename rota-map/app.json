@@ -1,17 +1,18 @@
 {
   "expo": {
-    "name": "meu-primeiro-app",
-    "slug": "meu-primeiro-app",
+    "name": "Rota Map",
+    "slug": "rota-map",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
-    "scheme": "meuprimeiroapp",
+    "scheme": "rotamap",
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
     "ios": {
       "supportsTablet": true
     },
     "android": {
+      "package": "com.rotamap.app",
       "adaptiveIcon": {
         "backgroundColor": "#E6F4FE",
         "foregroundImage": "./assets/images/android-icon-foreground.png",
