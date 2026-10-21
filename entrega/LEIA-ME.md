@@ -8,8 +8,9 @@ com backend. Os dados exibidos são fictícios e ficam em `rota-map/constants/de
 | Arquivo | Descrição |
 | --- | --- |
 | `RotaMap-v1.0.0.apk` | Aplicativo Android instalável (80,8 MB) |
-| `RotaMap-apresentacao.pdf` | Apresentação em 11 slides, pronta para projeção |
-| `RotaMap-apresentacao.pptx` | Mesma apresentação em formato editável |
+
+A apresentação de slides e o roteiro não são versionados — ficam nesta mesma
+pasta no computador de quem apresenta e são entregues à parte.
 
 ## Instalar no celular
 
