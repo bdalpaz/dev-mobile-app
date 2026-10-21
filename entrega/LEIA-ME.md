@@ -5,12 +5,26 @@ com backend. Os dados exibidos são fictícios e ficam em `rota-map/constants/de
 
 ## Arquivos
 
+Esta pasta não é versionada: o APK, os slides e o roteiro ficam no computador
+de quem apresenta e são entregues à parte. O repositório guarda o código-fonte,
+que é o que muda a cada commit.
+
 | Arquivo | Descrição |
 | --- | --- |
 | `RotaMap-v1.0.0.apk` | Aplicativo Android instalável (80,8 MB) |
+| `RotaMap-apresentacao.pdf` | Apresentação em 10 slides, pronta para projeção |
+| `RotaMap-apresentacao.pptx` | Mesma apresentação em formato editável |
+| `ROTEIRO-APRESENTACAO.txt` | Divisão das falas entre as quatro pessoas |
 
-A apresentação de slides e o roteiro não são versionados — ficam nesta mesma
-pasta no computador de quem apresenta e são entregues à parte.
+Para gerar o APK de novo a partir do código:
+
+```bash
+cd rota-map
+npx expo prebuild --platform android
+cd android && ./gradlew assembleRelease
+```
+
+O arquivo sai em `android/app/build/outputs/apk/release/`.
 
 ## Instalar no celular
 

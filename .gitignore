@@ -2,3 +2,6 @@
 entrega/*.pdf
 entrega/*.pptx
 entrega/ROTEIRO-APRESENTACAO.txt
+
+# Binário de build — distribuído por release, não pelo repositório
+entrega/*.apk
