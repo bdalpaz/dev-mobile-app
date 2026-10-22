@@ -26,6 +26,32 @@ cd android && ./gradlew assembleRelease
 
 O arquivo sai em `android/app/build/outputs/apk/release/`.
 
+### O build não roda na pasta do projeto
+
+O caminho atual tem acento (`Área de Trabalho`) e o `fs.cpSync` do Node 24.6 no
+Windows **não copia nada e não dá erro** quando o destino tem caractere não-ASCII.
+O `prebuild` cria `android/` vazia e a falha só aparece depois, como
+`AssertionError: Project file "MainApplication" does not exist in android project` —
+que aponta para o lugar errado e não tem nada a ver com o Expo.
+
+Copie o projeto para um caminho só com ASCII e rode os comandos acima de lá:
+
+```bash
+robocopy "<projeto>\rota-map" C:\rota-map-build /E /XD node_modules .expo android ios
+cd C:\rota-map-build
+npm ci
+```
+
+O Gradle precisa ainda de duas variáveis de ambiente:
+
+```bash
+JAVA_HOME=C:\Program Files\Java\jdk-17      # o java do PATH é o 25, que não serve
+ANDROID_HOME=C:\Users\<usuário>\AppData\Local\Android\Sdk
+```
+
+Mover o projeto para fora da Área de Trabalho, ou usar outra versão do Node,
+resolve na origem e dispensa a cópia.
+
 ## Instalar no celular
 
 1. Transferir o arquivo `.apk` para o aparelho.
